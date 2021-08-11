@@ -1,12 +1,4 @@
-def validate_email():
-    with open("emails.txt", "a+") as f:
-        for line in f:
-            if line in f.read():
-                raise ValueError("Email you're entering already exists!")
-            # try:
-            #     self.email == self.email
-            # except ValueError:
-            #     print("")
+
 
 
 class Employee:
@@ -16,12 +8,18 @@ class Employee:
         self.salary = salary
         self.working_days = working_days
         self.email = email
+        self.validate_email()
         self.save_email()
-        validate_email()
+
+    def validate_email(self):
+        with open("emails.txt", "a+") as f:
+            f.seek(0)
+            if self.email in f.read():
+                raise ValueError('Email is already taken.')
 
     def save_email(self):
         with open("emails.txt", "a+") as f:
-            f.write(self.email)
+            f.write(self.email + '\n')
 
     def work(self):
         return "I come to the office."

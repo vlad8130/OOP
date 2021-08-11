@@ -6,7 +6,7 @@ from models import Recruiter
 from vacancy import Candidate, Vacancy
 
 
-if name == '__main__':
+if __name__ == '__main__':
     prog = Programmer('Vladimir', 1500, 9, 'vlisitskiy@gmail.com', 'Python')
     prog2 = Programmer('John', 1000, 15, 'johnjohn@gmail.com', 'Java')
     recr = Recruiter('Petr', 500, 14, 'user@gmail.com')
@@ -21,4 +21,4 @@ if name == '__main__':
     prog.__str__()
     recr.work()
     recr.__str__()
-    cand.work()
+    # cand.work()
