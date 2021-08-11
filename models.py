@@ -1,6 +1,3 @@
-
-
-
 class Employee:
 
     def __init__(self, name, salary, working_days, email):
