@@ -20,5 +20,3 @@ class Vacancy:
         self.title = title
         self.main_skill = main_skill
         self.main_skill_level = main_skill_level
-
-    pass

@@ -1,4 +1,5 @@
-from os import name
+import datetime
+import traceback
 
 from models import Employee
 from models import Programmer
@@ -22,3 +23,15 @@ if __name__ == '__main__':
     recr.work()
     recr.__str__()
     # cand.work()
+
+
+def logger_boy(func_to_wrap):
+    def wrapper(*args, **kwargs):
+        try:
+            return func_to_wrap(*args, **kwargs)
+        except Exception as err:
+            with open('logs.txt', 'a') as f:
+                message = '{}   {}:\n   {}\n\n'. format(datetime.datetime.now(),
+                                                        err.__class__.__name__, traceback.format_exc())
+                f.write(message)
+    return wrapper()
