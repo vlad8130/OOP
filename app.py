@@ -8,10 +8,10 @@ from vacancy import Candidate, Vacancy
 
 
 if __name__ == '__main__':
-    prog = Programmer('Vladimir', 1500, 9, 'vlisitskiy@gmail.com', 'Python')
-    prog2 = Programmer('John', 1000, 15, 'johnjohn@gmail.com', 'Java')
-    recr = Recruiter('Petr', 500, 14, 'user@gmail.com')
-    emp = Employee('Ivan', 450, 15, 'ivantsarevich@mail.com')
+    prog = Programmer('Vladimir', 'Lisitskiy', 1500, 9, 'vlisitskiy@gmail.com', 'Python')
+    prog2 = Programmer('John', 'Malkovich', 1000, 15, 'johnjohn@gmail.com', 'Java')
+    recr = Recruiter('Petr', 'Petrov', 500, 14, 'user@gmail.com')
+    emp = Employee('Ivan', 'Ivanov', 450, 15, 'ivantsarevich@mail.com')
     cand = Candidate('Vasya', 'user1@mail.ru', 'computers', 'Computer Skills', 5)
     cand2 = Candidate('Anna', 'user2@mail.ru', 'Information Technology', 'Front End', 4)
     cand3 = Candidate('Epifaniy', 'user3@mail.ru', 'Software', 'Problem-Solving', 2)
